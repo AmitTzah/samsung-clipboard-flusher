@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Monochrome - blue shield + copy sheets as single color for themed icons -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,20.5 L78,30.2 Q78,50.5 66.5,60.8 Q60,66.4 54,69.5 Q48,66.4 41.5,60.8 Q30,50.5 30,30.2 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48.2,39.5 h16.2 a1.6,1.6 0 0 1 1.6,1.6 v14.2 a1.6,1.6 0 0 1 -1.6,1.6 h-16.2 a1.6,1.6 0 0 1 -1.6,-1.6 v-14.2 a1.6,1.6 0 0 1 1.6,-1.6 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M43.6,35.2 h16.2 a1.6,1.6 0 0 1 1.6,1.6 v14.2 a1.6,1.6 0 0 1 -1.6,1.6 h-16.2 a1.6,1.6 0 0 1 -1.6,-1.6 v-14.2 a1.6,1.6 0 0 1 1.6,-1.6 z" />
+</vector>
