@@ -5,60 +5,6 @@ activity, zero permissions, no network, no dependencies. Tap the widget and
 it overwrites the clipboard 40 times with harmless whitespace so older items
 fall out of Samsung's clipboard history.
 
-## Does it actually help?
-
-Yes, with caveats. Samsung Keyboard's clipboard history keeps roughly the
-last 20-24 copied items. Copying 40 distinct whitespace entries pushes your
-older item (a sensitive copy) out of the visible history. Each entry is a
-different number of spaces (`" "`, `"  "`, ... 40 spaces) because Samsung may
-merge identical consecutive copies into a single history entry.
-
-Important limits:
-
-- **Pinned items stay.** Anything you pinned in Samsung's clipboard panel
-  will not be evicted. Unpin or delete it first.
-- **It evicts from the visible history, not from Samsung's internal
-  storage.** One UI manages clipboard history at the system level and keeps
-  it persistently; there are user reports that even Samsung's own "clear"
-  button does not fully remove items. This app guarantees the sensitive copy
-  no longer appears in the history list and overwrites the current clipboard
-  with spaces, but it cannot guarantee a forensic wipe of Samsung's
-  clipboard database.
-- **It does not delete synced copies.** If "Clipboard history across your
-  devices" (Samsung account sync) is on, the sensitive text may already be
-  on your other Galaxy devices. Turn sync off and clear any synced copies.
-- **It does not scrub deeper storage.** Entries that other apps copied or
-  stored (e.g. password managers, cloud sync) are untouched.
-
-**Turning history off entirely is not reliably possible.** Some One UI
-versions have a toggle under Settings > General management > Samsung Keyboard
-settings > Clipboard ("Save clipboard history" off), but Samsung removed that
-option on many recent builds and manages clipboard history at the system
-level. What does exist on current Galaxy phones:
-
-- **Clear everything:** open the keyboard's clipboard panel (clipboard icon
-  above the keys) > menu > "Delete all".
-- **Remove the Clipboard edge panel:** Settings > Display > Edge panels >
-  deselect Clipboard.
-- **Get alerts when an app reads your clipboard:** Settings > Security and
-  privacy > Privacy > "Alert when clipboard accessed".
-- **Last resort (advanced, at your own risk):** `adb shell pm disable-user
-  --user 0 com.samsung.clipboardsaveservice` - this disables the system
-  service that saves history, but it can affect normal copy/paste behavior
-  and may not erase entries that are already stored. Back up first.
-
-This widget is for when you want history on (or cannot turn it off) but still
-want a one-tap cleanup. For genuinely sensitive data, avoid copying it into
-the clipboard in the first place.
-
-## Why a brief invisible activity?
-
-Android 10+ blocks background apps from writing to the clipboard. A widget
-tap alone cannot do it, so the tap opens a transparent activity for about
-half a second (you may see a faint flash), writes the whitespace entries,
-and closes itself. The alternative would be an accessibility service, which
-is far more invasive.
-
 ## Download the APK
 
 **[Download the latest APK (one click)](https://github.com/AmitTzah/samsung-clipboard-flusher/releases/latest/download/clipboard-flusher-release.apk)**
@@ -119,6 +65,60 @@ build. The release APK is minified and not debuggable.
 To verify: copy a test phrase, tap the widget, then open Samsung Keyboard's
 clipboard panel (clipboard icon above the keys). The phrase should be gone
 and only whitespace entries should remain.
+
+## Does it actually help?
+
+Yes, with caveats. Samsung Keyboard's clipboard history keeps roughly the
+last 20-24 copied items. Copying 40 distinct whitespace entries pushes your
+older item (a sensitive copy) out of the visible history. Each entry is a
+different number of spaces (`" "`, `"  "`, ... 40 spaces) because Samsung may
+merge identical consecutive copies into a single history entry.
+
+Important limits:
+
+- **Pinned items stay.** Anything you pinned in Samsung's clipboard panel
+  will not be evicted. Unpin or delete it first.
+- **It evicts from the visible history, not from Samsung's internal
+  storage.** One UI manages clipboard history at the system level and keeps
+  it persistently; there are user reports that even Samsung's own "clear"
+  button does not fully remove items. This app guarantees the sensitive copy
+  no longer appears in the history list and overwrites the current clipboard
+  with spaces, but it cannot guarantee a forensic wipe of Samsung's
+  clipboard database.
+- **It does not delete synced copies.** If "Clipboard history across your
+  devices" (Samsung account sync) is on, the sensitive text may already be
+  on your other Galaxy devices. Turn sync off and clear any synced copies.
+- **It does not scrub deeper storage.** Entries that other apps copied or
+  stored (e.g. password managers, cloud sync) are untouched.
+
+**Turning history off entirely is not reliably possible.** Some One UI
+versions have a toggle under Settings > General management > Samsung Keyboard
+settings > Clipboard ("Save clipboard history" off), but Samsung removed that
+option on many recent builds and manages clipboard history at the system
+level. What does exist on current Galaxy phones:
+
+- **Clear everything:** open the keyboard's clipboard panel (clipboard icon
+  above the keys) > menu > "Delete all".
+- **Remove the Clipboard edge panel:** Settings > Display > Edge panels >
+  deselect Clipboard.
+- **Get alerts when an app reads your clipboard:** Settings > Security and
+  privacy > Privacy > "Alert when clipboard accessed".
+- **Last resort (advanced, at your own risk):** `adb shell pm disable-user
+  --user 0 com.samsung.clipboardsaveservice` - this disables the system
+  service that saves history, but it can affect normal copy/paste behavior
+  and may not erase entries that are already stored. Back up first.
+
+This widget is for when you want history on (or cannot turn it off) but still
+want a one-tap cleanup. For genuinely sensitive data, avoid copying it into
+the clipboard in the first place.
+
+## Why a brief invisible activity?
+
+Android 10+ blocks background apps from writing to the clipboard. A widget
+tap alone cannot do it, so the tap opens a transparent activity for about
+half a second (you may see a faint flash), writes the whitespace entries,
+and closes itself. The alternative would be an accessibility service, which
+is far more invasive.
 
 ## Build from source
 
