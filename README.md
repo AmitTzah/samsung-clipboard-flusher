@@ -1,7 +1,7 @@
 # Clipboard Flusher
 
 Clipboard Flusher is a one-tap widget for Samsung phones. Tap it and the app
-writes 40 spaces to the clipboard, pushing older copied items out of
+writes 60 spaces to the clipboard, pushing older copied items out of
 Samsung's clipboard history.
 
 ## Download the APK
@@ -57,7 +57,7 @@ build. The release APK is minified and not debuggable.
 3. Find **Clipboard Flusher** (search "flush" if needed).
 4. Drag the widget onto the home screen.
 5. Tap the widget whenever you want to flush. A very brief transparent flash
-   (about 0.5 seconds) means it is working - that is the app writing the 40
+   (about 0.3 seconds) means it is working - that is the app writing the 60
    whitespace entries. The widget keeps no state and uses no battery between
    taps.
 
@@ -68,10 +68,11 @@ and only whitespace entries should remain.
 ## Does it actually help?
 
 Yes, with caveats. Samsung Keyboard's clipboard history keeps roughly the
-last 20-24 copied items. Copying 40 distinct whitespace entries pushes your
-older item (a sensitive copy) out of the visible history. Each entry is a
-different number of spaces (`" "`, `"  "`, ... 40 spaces) because Samsung may
-merge identical consecutive copies into a single history entry.
+last 20-24 copied items (some newer One UI builds report up to ~50). Copying
+60 distinct whitespace entries pushes your older item (a sensitive copy) out
+of the visible history with margin. Each entry is a different number of
+spaces (`" "`, `"  "`, ... 60 spaces) because Samsung may merge identical
+consecutive copies into a single history entry.
 
 Important limits:
 
