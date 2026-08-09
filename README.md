@@ -61,8 +61,12 @@ is far more invasive.
 
 ## Download the APK
 
-Get `clipboard-flusher-release.apk` from the latest GitHub Release, or build
-it yourself (see "Build from source") and copy the file from:
+**[Download the latest APK (one click)](https://github.com/AmitTzah/samsung-clipboard-flusher/releases/latest/download/clipboard-flusher-release.apk)**
+- a signed release build, no compilation needed. You can also browse all
+[releases](https://github.com/AmitTzah/samsung-clipboard-flusher/releases).
+
+Alternatively, build it yourself (see "Build from source") and copy the file
+from:
 
 ```
 app\build\outputs\apk\release\clipboard-flusher-release.apk
