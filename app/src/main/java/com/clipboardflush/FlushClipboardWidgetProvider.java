@@ -9,7 +9,7 @@ import android.widget.RemoteViews;
 
 /**
  * Home-screen widget whose only action is "flush the clipboard".
- * Tapping it launches {@link ClipboardFlusherActivity}.
+ * Tapping it launches {@link ClipboardFlusherActivity} with no animation.
  */
 public class FlushClipboardWidgetProvider extends AppWidgetProvider {
 
@@ -19,6 +19,7 @@ public class FlushClipboardWidgetProvider extends AppWidgetProvider {
             RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.widget_flush);
 
             Intent flushIntent = new Intent(context, ClipboardFlusherActivity.class);
+            flushIntent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
             PendingIntent pendingIntent = PendingIntent.getActivity(
                     context,
                     0,
