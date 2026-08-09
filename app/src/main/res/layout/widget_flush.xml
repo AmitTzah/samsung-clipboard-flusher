@@ -3,15 +3,7 @@
     android:id="@+id/widget_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/widget_tile"
+    android:background="@drawable/widget_icon"
     android:clickable="true"
-    android:focusable="true">
-
-    <ImageView
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_gravity="center"
-        android:contentDescription="@string/widget_description"
-        android:src="@drawable/widget_flush_icon" />
-
-</FrameLayout>
+    android:contentDescription="@string/widget_description"
+    android:focusable="true" />
