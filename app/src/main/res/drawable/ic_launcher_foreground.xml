@@ -4,26 +4,26 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Centered - shifted down 9dp to true viewport center -->
+    <!-- Max size - fills 66dp safe zone (21-87) for biggest presence -->
     <path
         android:fillColor="#1668DC"
-        android:pathData="M54,25.8 L81.6,37 Q81.6,60.3 68.4,72.2 Q60.9,78.6 54,82.2 Q47.1,78.6 39.6,72.2 Q26.4,60.3 26.4,37 Z"
+        android:pathData="M54,21 L87,32 Q87,55 75.5,72 Q66,82 54,87 Q42,82 32.5,72 Q21,55 21,32 Z"
         android:strokeColor="#0C4DA6"
         android:strokeWidth="0.9" />
     <path
         android:fillColor="#FFFFFF"
         android:fillAlpha="0.92"
-        android:pathData="M48.5,48.5 h17.5 a1.7,1.7 0 0 1 1.7,1.7 v15.3 a1.7,1.7 0 0 1 -1.7,1.7 h-17.5 a1.7,1.7 0 0 1 -1.7,-1.7 v-15.3 a1.7,1.7 0 0 1 1.7,-1.7 z"
+        android:pathData="M48.8,47.5 h19.5 a1.8,1.8 0 0 1 1.8,1.8 v17 a1.8,1.8 0 0 1 -1.8,1.8 h-19.5 a1.8,1.8 0 0 1 -1.8,-1.8 v-17 a1.8,1.8 0 0 1 1.8,-1.8 z"
         android:strokeColor="#0C4DA6"
         android:strokeWidth="0.65" />
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M43.2,44 h17.5 a1.7,1.7 0 0 1 1.7,1.7 v15.3 a1.7,1.7 0 0 1 -1.7,1.7 h-17.5 a1.7,1.7 0 0 1 -1.7,-1.7 v-15.3 a1.7,1.7 0 0 1 1.7,-1.7 z"
+        android:pathData="M42.8,42.5 h19.5 a1.8,1.8 0 0 1 1.8,1.8 v17 a1.8,1.8 0 0 1 -1.8,1.8 h-19.5 a1.8,1.8 0 0 1 -1.8,-1.8 v-17 a1.8,1.8 0 0 1 1.8,-1.8 z"
         android:strokeColor="#0C4DA6"
         android:strokeWidth="0.75" />
     <path
-        android:pathData="M45.6,49.3 h12.4 M45.6,52.9 h12.4 M45.6,56.5 h8.4"
+        android:pathData="M45.2,48.2 h13.8 M45.2,52.2 h13.8 M45.2,56.2 h9.4"
         android:strokeColor="#1668DC"
         android:strokeLineCap="round"
-        android:strokeWidth="1.25" />
+        android:strokeWidth="1.35" />
 </vector>
