@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Clipboard Flusher</string>
+    <string name="widget_label">Flush clipboard</string>
+    <string name="widget_description">Tap to overwrite clipboard history with whitespace entries.</string>
+</resources>
