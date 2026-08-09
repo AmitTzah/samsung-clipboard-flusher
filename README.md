@@ -1,9 +1,8 @@
 # Clipboard Flusher
 
-A deliberately tiny Android app: one home-screen widget, one invisible
-activity, zero permissions, no network, no dependencies. Tap the widget and
-it overwrites the clipboard 40 times with harmless whitespace so older items
-fall out of Samsung's clipboard history.
+Clipboard Flusher is a one-tap widget for Samsung phones. Tap it and the app
+writes 40 spaces to the clipboard, pushing older copied items out of
+Samsung's clipboard history.
 
 ## Download the APK
 
