@@ -3,9 +3,9 @@
     android:description="@string/widget_description"
     android:initialLayout="@layout/widget_flush"
     android:minHeight="40dp"
-    android:minWidth="110dp"
-    android:resizeMode="horizontal|vertical"
+    android:minWidth="40dp"
+    android:resizeMode="none"
     android:targetCellHeight="1"
-    android:targetCellWidth="2"
+    android:targetCellWidth="1"
     android:updatePeriodMillis="0"
     android:widgetCategory="home_screen" />
